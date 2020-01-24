@@ -88,11 +88,48 @@ public class ArrayFunctions
 
     public static void stringArray()
     {
-        String a[] = {"Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct"};
-        for(int i=0; i<a.length; i++)
+        String month[];
+        month = new String[10];
+        month[0]="January";
+        month[1]="February";
+        month[2]="March";
+        month[3]="April";
+        month[4]="May";
+        month[5]="June";
+        month[6]="July";
+        month[7]="August";
+        month[8]="September";
+        month[9]="October";
+
+        for(int i=0; i<month.length; i++)
         {
-            System.out.println(a[i]);
+            String rstr = reverseStringArray(month[i]);
+            System.out.println(month[i] + "<->" + rstr);
+
         }
+
     }
+
+    public static String reverseStringArray(String s)
+    {
+
+        char a;
+        String temp;
+        char months[] = s.toCharArray();
+        int len = months.length;
+
+        for(int i=0, j = len-1; i<len/2; i++, j--)
+        {
+            a = months[i];
+            months[i] = months[j];
+            months[j] = a;
+
+        }
+
+        temp = new String(months);
+        return temp;
+
+    }
+
 
 }
