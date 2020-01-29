@@ -26,6 +26,17 @@ public class ArrayFunctions
         displayReverseArray();
         findArray();
 
+        String [][] arrstr = new String[3][4];
+        for (int i = 0; i<arrstr.length;i++)
+        {
+            for(int j=0; j<arrstr[i].length;j++)
+            {
+                arrstr[i][j] = "Str" + j;
+                System.out.print(arrstr[i][j] +" ");
+            }
+            System.out.println("");
+        }
+
         int d[] = new int []{1,2,3,4,5,6,7,8,9,10};
         System.out.println(d.length);
         System.out.println("Using for(;;)");
@@ -130,6 +141,5 @@ public class ArrayFunctions
         return temp;
 
     }
-
 
 }
